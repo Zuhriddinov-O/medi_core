@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:med_city/presentation/pages/intro/role_page.dart';
+import 'package:med_city/presentation/pages/intro/registration_page.dart';
 import 'package:med_city/presentation/widgets/default_button.dart';
 
 class ToGoRegistration extends StatelessWidget {
@@ -9,13 +9,13 @@ class ToGoRegistration extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CircleAvatar(
-            child: Image.asset("assets/images/lock.png", scale: 1, fit: BoxFit.fill, filterQuality: FilterQuality.high),
+            child:
+                Image.asset("assets/images/lock.png", scale: 1, fit: BoxFit.fill, filterQuality: FilterQuality.high),
             minRadius: 50,
           ),
           Gap(50),
@@ -28,7 +28,7 @@ class ToGoRegistration extends StatelessWidget {
                   textAlign: TextAlign.center,
                   softWrap: true)),
           Gap(40),
-          elevatedButton(context, RolePage(), "Registration via OneId")
+          elevatedButton(context, RegistrationPage(), "Registration via OneId")
         ],
       ),
     );

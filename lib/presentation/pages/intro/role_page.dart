@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:med_city/presentation/pages/intro/togo_registration.dart';
@@ -18,6 +17,7 @@ bool _checkBoxState3 = false;
 class _RolePageState extends State<RolePage> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         bottom: PreferredSize(
@@ -67,7 +67,7 @@ class _RolePageState extends State<RolePage> {
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
               tileColor: Colors.grey[200],
               leading: Image.asset("assets/images/nurse.png"),
-              title: Text("Patient"),
+              title: Text("Medical staff"),
               trailing: Checkbox(
                 shape: StadiumBorder(),
                 value: _checkBoxState2,
@@ -88,7 +88,7 @@ class _RolePageState extends State<RolePage> {
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
               tileColor: Colors.grey[200],
               leading: Image.asset("assets/images/shield.png"),
-              title: Text("Patient"),
+              title: Text("Healthcare facility operator"),
               trailing: Checkbox(
                 shape: StadiumBorder(),
                 value: _checkBoxState3,
@@ -103,7 +103,7 @@ class _RolePageState extends State<RolePage> {
             ),
           ),
           Expanded(child: Container()),
-         elevatedButton(context, ToGoRegistration(), "Next"),
+          elevatedButton(context, ToGoRegistration(), "Next"),
           Gap(30)
         ],
       ),
