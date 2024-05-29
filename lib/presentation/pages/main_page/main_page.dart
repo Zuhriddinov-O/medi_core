@@ -9,7 +9,7 @@ import 'documents_page.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({super.key, required this.text});
-  String text;
+  final String text;
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -20,7 +20,7 @@ class _MainPageState extends State<MainPage> {
   List pages = [
     HomePage(),
     AppointmentPage(),
-    DocumentsPage(text: text),
+    DocumentsPage(),
     ProfilePage(),
   ];
   List<Icon> icons = [
@@ -44,6 +44,7 @@ class _MainPageState extends State<MainPage> {
         selectedItemColor: Color(0xff074CFD),
         unselectedItemColor: Colors.grey,
         currentIndex: selectIndex,
+        type: BottomNavigationBarType.fixed,
         showUnselectedLabels: true,
         items: [
           BottomNavigationBarItem(icon: icons[0], label: "Home"),
