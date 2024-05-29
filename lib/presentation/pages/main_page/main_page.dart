@@ -9,7 +9,7 @@ import 'documents_page.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({super.key, required this.text});
-  String text;
+  final String text;
 
   @override
   State<MainPage> createState() => _MainPageState();

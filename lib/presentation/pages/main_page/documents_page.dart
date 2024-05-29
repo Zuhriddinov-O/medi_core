@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class DocumentsPage extends StatefulWidget {
   DocumentsPage({super.key, required this.text});
 
-  String text;
+  final String text;
 
   @override
   State<DocumentsPage> createState() => _DocumentsPageState();
