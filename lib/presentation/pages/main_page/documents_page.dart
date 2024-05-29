@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DocumentsPage extends StatefulWidget {
-  DocumentsPage({super.key});
+  DocumentsPage({super.key, required this.text});
+
+  final String text;
 
   @override
   State<DocumentsPage> createState() => _DocumentsPageState();
@@ -20,7 +22,7 @@ class _DocumentsPageState extends State<DocumentsPage> {
         backgroundColor: CupertinoColors.systemGrey6,
         foregroundColor: Colors.white,
         title: Text(
-          "Documents",
+          widget.text,
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, color: Colors.black),
         ),
       ),

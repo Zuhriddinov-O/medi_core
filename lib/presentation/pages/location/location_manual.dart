@@ -52,7 +52,7 @@ class _LocationManualState extends State<LocationManual> {
                 _searchIsActive ? Icons.clear : Icons.search,
                 color: Color(0xff074CFD),
                 size: 30,
-              ))
+              ),)
         ],
         bottom: PreferredSize(preferredSize: Size.fromHeight(10), child: Divider()),
       ),
