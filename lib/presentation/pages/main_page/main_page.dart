@@ -4,10 +4,12 @@ import 'package:med_city/presentation/pages/main_page/appointment_page.dart';
 import 'package:med_city/presentation/pages/main_page/home_page.dart';
 import 'package:med_city/presentation/pages/main_page/profile_page.dart';
 
+import '../location/location_manual.dart';
 import 'documents_page.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+  MainPage({super.key, required this.text});
+  String text;
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -18,7 +20,7 @@ class _MainPageState extends State<MainPage> {
   List pages = [
     HomePage(),
     AppointmentPage(),
-    DocumentsPage(),
+    DocumentsPage(text: text),
     ProfilePage(),
   ];
   List<Icon> icons = [

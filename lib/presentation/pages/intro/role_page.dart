@@ -13,11 +13,11 @@ class RolePage extends StatefulWidget {
 bool _checkBoxState1 = false;
 bool _checkBoxState2 = false;
 bool _checkBoxState3 = false;
+bool backBool = false;
 
 class _RolePageState extends State<RolePage> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         bottom: PreferredSize(
@@ -103,9 +103,52 @@ class _RolePageState extends State<RolePage> {
             ),
           ),
           Expanded(child: Container()),
-          elevatedButton(context, ToGoRegistration(), "Next"),
+          elevatedButton(
+              context,
+              _checkBoxState1 || _checkBoxState2 || _checkBoxState3 == true ? ToGoRegistration() : alertContainer(),
+              "Next",
+              backBool = true),
           Gap(30)
         ],
+      ),
+    );
+  }
+
+  alertContainer() {
+    return Scaffold(
+      backgroundColor: Color(0xffFDFDFD),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(
+              "assets/images/file.gif",
+              width: 200,
+              height: 200,
+              fit: BoxFit.fill,
+              filterQuality: FilterQuality.high,
+            ),
+            SizedBox(
+                width: 350,
+                child: Text(
+                  "Choose one of your role from the top,otherwise you can not pass to the next page",
+                  style: TextStyle(fontSize: 15),
+                  textAlign: TextAlign.center,
+                )),
+            Gap(50),
+            ElevatedButton(
+                style: ButtonStyle(
+                  shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+                  minimumSize: MaterialStatePropertyAll(Size(361, 50)),
+                  backgroundColor: MaterialStatePropertyAll(Color(0xff074CFD)),
+                ),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text("Go Back", style: TextStyle(color: Colors.white)))
+          ],
+        ),
       ),
     );
   }

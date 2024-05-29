@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:med_city/presentation/pages/intro/registration_page.dart';
+import 'package:med_city/presentation/pages/location/location_page.dart';
 import 'package:med_city/presentation/widgets/default_button.dart';
+
+final bool backBool = false;
 
 class ToGoRegistration extends StatelessWidget {
   const ToGoRegistration({super.key});
@@ -14,8 +17,7 @@ class ToGoRegistration extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CircleAvatar(
-            child:
-                Image.asset("assets/images/lock.png", scale: 1, fit: BoxFit.fill, filterQuality: FilterQuality.high),
+            child: Image.asset("assets/images/lock.png", scale: 1, fit: BoxFit.fill, filterQuality: FilterQuality.high),
             minRadius: 50,
           ),
           Gap(50),
@@ -28,7 +30,7 @@ class ToGoRegistration extends StatelessWidget {
                   textAlign: TextAlign.center,
                   softWrap: true)),
           Gap(40),
-          elevatedButton(context, RegistrationPage(), "Registration via OneId")
+          elevatedButton(context, Location(), "Registration via OneId", backBool)
         ],
       ),
     );

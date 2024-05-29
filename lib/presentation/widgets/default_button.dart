@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-elevatedButton(BuildContext context, pageName, String textInButton) {
+elevatedButton(BuildContext context, pageName, String textInButton,bool backBool) {
   return ElevatedButton(
     style: ButtonStyle(
       shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
@@ -13,7 +13,7 @@ elevatedButton(BuildContext context, pageName, String textInButton) {
           CupertinoPageRoute(
             builder: (context) => pageName,
           ),
-          (route) => false);
+          (route) => backBool);
     },
     child: Text(textInButton, style: TextStyle(color: Colors.white)),
   );
