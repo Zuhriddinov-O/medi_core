@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: CupertinoColors.systemBlue),
         useMaterial3: true,
       ),
-      home: RolePage(),
+      home: MainPage(text: ''),
     );
   }
 }
