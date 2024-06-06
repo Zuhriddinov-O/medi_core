@@ -2,8 +2,10 @@ import 'package:animations/animations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:med_city/domain/data/repository/data_repository.dart';
 import 'package:med_city/presentation/pages/detail_page/med_per_details.dart';
 import 'package:med_city/presentation/pages/location/location_manual.dart';
+import 'package:med_city/presentation/widgets/future_builder.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,6 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final repo = ApiRepositoryImpl();
   TextEditingController _textEditingController = TextEditingController();
   bool _searchIsActive = false;
 
@@ -97,7 +100,8 @@ class _HomePageState extends State<HomePage> {
           return Container(
             width: 150,
             height: 150,
-            color: Colors.yellowAccent,
+            color: Colors.blueAccent,
+            child: FBuilder(repo: repo),
           );
         },
         openBuilder: (context, action) => MedPerDetails(),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:med_city/presentation/pages/intro/registration_page.dart';
 import 'package:med_city/presentation/pages/location/location_page.dart';
 import 'package:med_city/presentation/widgets/default_button.dart';
 

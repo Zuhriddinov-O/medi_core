@@ -4,7 +4,6 @@ import 'package:med_city/presentation/pages/main_page/appointment_page.dart';
 import 'package:med_city/presentation/pages/main_page/home_page.dart';
 import 'package:med_city/presentation/pages/main_page/profile_page.dart';
 
-import '../location/location_manual.dart';
 import 'documents_page.dart';
 
 class MainPage extends StatefulWidget {
@@ -20,7 +19,7 @@ class _MainPageState extends State<MainPage> {
   List pages = [
     HomePage(),
     AppointmentPage(),
-    DocumentsPage(text: text),
+    DocumentsPage(),
     ProfilePage(),
   ];
   List<Icon> icons = [
@@ -44,6 +43,7 @@ class _MainPageState extends State<MainPage> {
         selectedItemColor: Color(0xff074CFD),
         unselectedItemColor: Colors.grey,
         currentIndex: selectIndex,
+        type: BottomNavigationBarType.fixed,
         showUnselectedLabels: true,
         items: [
           BottomNavigationBarItem(icon: icons[0], label: "Home"),
