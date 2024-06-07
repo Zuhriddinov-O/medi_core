@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class Hospitals extends StatefulWidget {
-  const Hospitals({super.key});
+class HospitalsPage extends StatefulWidget {
+  const HospitalsPage({super.key});
 
   @override
-  State<Hospitals> createState() => _HospitalsState();
+  State<HospitalsPage> createState() => _HospitalsPageState();
 }
 
-class _HospitalsState extends State<Hospitals> {
+class _HospitalsPageState extends State<HospitalsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Hospitals"),
+        child: Text("Hospitals_Page"),
       ),
     );
   }

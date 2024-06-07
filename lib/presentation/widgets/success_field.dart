@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:med_city/domain/data/model/data_model.dart';
+import 'package:med_city/domain/data/model/doctors_model.dart';
 
 SuccessField(Doctors? doctors) {
   return Container(

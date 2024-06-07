@@ -1,6 +1,6 @@
 import 'package:med_city/core/constants/constants.dart';
 import 'package:med_city/domain/data/network/api_service.dart';
-import '../model/data_model.dart';
+import '../model/doctors_model.dart';
 
 abstract class ApiRepository {
   Future<Doctors> getDoctors();

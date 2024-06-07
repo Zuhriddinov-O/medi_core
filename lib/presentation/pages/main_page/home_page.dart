@@ -2,7 +2,7 @@ import 'package:animations/animations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:med_city/domain/data/repository/data_repository.dart';
+import 'package:med_city/domain/data/repository/doctors_repository.dart';
 import 'package:med_city/presentation/pages/detail_page/med_per_details.dart';
 import 'package:med_city/presentation/pages/location/location_manual.dart';
 import 'package:med_city/presentation/widgets/future_builder.dart';
