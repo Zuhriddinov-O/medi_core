@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:med_city/domain/data/repository/doctors_repository.dart';
-import 'package:med_city/presentation/widgets/success_field.dart';
+import 'package:med_city/presentation/widgets/nurses_success_field.dart';
 
 class FBuilder extends StatelessWidget {
   const FBuilder({super.key, required this.repo});

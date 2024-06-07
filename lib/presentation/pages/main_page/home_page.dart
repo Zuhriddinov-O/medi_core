@@ -5,7 +5,7 @@ import 'package:gap/gap.dart';
 import 'package:med_city/domain/data/repository/doctors_repository.dart';
 import 'package:med_city/presentation/pages/detail_page/med_per_details.dart';
 import 'package:med_city/presentation/pages/location/location_manual.dart';
-import 'package:med_city/presentation/widgets/future_builder.dart';
+import 'package:med_city/presentation/widgets/nurses_future_builder.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
