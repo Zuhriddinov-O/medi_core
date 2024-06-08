@@ -100,7 +100,6 @@ class _HomePageState extends State<HomePage> {
           return Container(
             width: 150,
             height: 150,
-            color: Colors.blueAccent,
             child: FBuilder(repo: repo),
           );
         },

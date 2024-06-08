@@ -28,21 +28,21 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CupertinoColors.systemGrey,
-      body: FutureBuilder(
-        future: _fetchHospitals(),
-        builder: (context, snapshot) {
-          if (snapshot.data != null) {
-            return _successField(snapshot.data);
-          } else if (snapshot.data == null) {
-            return Center(
-              child: SpinKitDualRing(
-                color: Colors.red,
-              ),
-            );
-          }
-          return Text("Profile Page");
-        },
-      ),
+      // body: FutureBuilder(
+      //   future: _fetchHospitals(),
+      //   builder: (context, snapshot) {
+      //     if (snapshot.data != null) {
+      //       return _successField(snapshot.data);
+      //     } else if (snapshot.data == null) {
+      //       return Center(
+      //         child: SpinKitDualRing(
+      //           color: Colors.red,
+      //         ),
+      //       );
+      //     }
+      //     return Text("Profile Page");
+      //   },
+      // ),
     );
   }
 

@@ -4,20 +4,19 @@ import 'package:med_city/domain/data/network/api_service.dart';
 import '../model/doctors_model.dart';
 
 abstract class ApiRepository {
-  Future<Doctors> getDoctors();
+  Future<List<Doctors>> getDoctors();
 }
 
 class ApiRepositoryImpl extends ApiRepository {
   final _api = ApiService(buildDioClient(Constants.baseUrl));
 
   @override
-  Future<Doctors> getDoctors() async {
+  Future<List<Doctors>> getDoctors() async {
     try {
-      final apiResponse = await _api.getDoctors();
-      return Doctors.fromJson(apiResponse.toJson());
+     return await _api.getDoctors();
     } catch (e) {
       print(e);
-      throw Exception("Could not load doctors");
+      return [];
     }
   }
 }

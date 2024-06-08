@@ -11,7 +11,7 @@ abstract class ApiService {
   factory ApiService(Dio dio,{String baseUrl}) = _ApiService;
 
   @GET("doctors")
-  Future<Doctors> getDoctors();
+  Future<List<Doctors>> getDoctors();
 }
 
 Dio buildDioClient(String baseUrl) {

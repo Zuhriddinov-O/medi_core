@@ -14,7 +14,7 @@ class FBuilder extends StatelessWidget {
       future: repo.getDoctors(),
       builder: (context, snapshot) {
         if (snapshot.data != null) {
-          return SuccessField(snapshot.data);
+          return SuccessField(snapshot.data ??[]);
         } else if (snapshot.data == null) {
           return SpinKitDancingSquare(
             color: Colors.black,

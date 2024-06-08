@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:med_city/domain/data/model/doctors_model.dart';
 
-SuccessField(Doctors? doctors) {
-  return Container(
-    width: 100,
-    height: 100,
-    child: Image.asset(doctors!.image!,fit: BoxFit.fill,filterQuality: FilterQuality.high),
+SuccessField(List<Doctors>? doctors) {
+  return GridView.builder(
+    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+    itemCount: doctors!.length,
+    itemBuilder: (context, index) {
+      final doctor = doctors[index];
+      return Container(
+        height: 100,
+        width: 100,
+        child: Image.asset(
+          doctor.image ?? "",
+          filterQuality: FilterQuality.high,
+          fit: BoxFit.fill,
+        ),
+      );
+    },
   );
 }
