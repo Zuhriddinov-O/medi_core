@@ -8,12 +8,14 @@ abstract class ApiRepository {
 }
 
 class ApiRepositoryImpl extends ApiRepository {
-  final _api = ApiService(buildDioClient(Constants.baseUrl));
+  final _api = ApiService(buildDioClient(Constants.baseUrl3));
 
   @override
   Future<List<Doctors>> getDoctors() async {
     try {
-     return await _api.getDoctors();
+      print('ishladddiiiiiiiiii');
+      await _api.getUsers();
+     return [];
     } catch (e) {
       print(e);
       return [];

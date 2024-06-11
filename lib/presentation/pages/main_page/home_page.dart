@@ -50,43 +50,43 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(children: [
-          Column(
-            children: [
-              Gap(30),
-              TextButton(
-                  onPressed: () {},
-                  child: Row(
-                    children: [
-                      Text(
-                        "Doctors nearby",
-                        style: TextStyle(color: Colors.black, fontSize: 20),
-                      ),
-                      Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.grey,
-                        size: 20,
-                      )
-                    ],
-                  )),
-              _openContainer(),
-              TextButton(
-                  onPressed: () {},
-                  child: Row(
-                    children: [
-                      Text(
-                        "Doctors nearby",
-                        style: TextStyle(color: Colors.black, fontSize: 20),
-                      ),
-                      Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.grey,
-                        size: 20,
-                      )
-                    ],
-                  )),
-              _openContainer(),
-            ],
-          ),
+           Column(
+             children: [
+               Gap(30),
+               TextButton(
+                   onPressed: () {},
+                   child: Row(
+                     children: [
+                       Text(
+                         "Doctors nearby",
+                         style: TextStyle(color: Colors.black, fontSize: 20),
+                       ),
+                       Icon(
+                         Icons.arrow_forward_ios,
+                         color: Colors.grey,
+                         size: 20,
+                       )
+                     ],
+                   )),
+               _openContainer(),
+               TextButton(
+                   onPressed: () {},
+                   child: Row(
+                     children: [
+                       Text(
+                         "Doctors nearby",
+                         style: TextStyle(color: Colors.black, fontSize: 20),
+                       ),
+                       Icon(
+                         Icons.arrow_forward_ios,
+                         color: Colors.grey,
+                         size: 20,
+                       )
+                     ],
+                   )),
+               _openContainer(),
+             ],
+           ),
         ]),
       ),
     );

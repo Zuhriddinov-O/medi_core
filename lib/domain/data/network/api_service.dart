@@ -12,6 +12,9 @@ abstract class ApiService {
 
   @GET("doctors")
   Future<List<Doctors>> getDoctors();
+
+  @GET("users")
+  Future<HttpResponse> getUsers();
 }
 
 Dio buildDioClient(String baseUrl) {

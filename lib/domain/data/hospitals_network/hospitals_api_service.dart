@@ -7,8 +7,8 @@ part "hospitals_api_service.g.dart";
 abstract class HospitalsApiService {
   factory HospitalsApiService(Dio dio, {String baseUrl}) = _HospitalsApiService;
 
-  @GET("get_hospitals.php")
-  Future<Hospitals> getHospitals();
+  @GET("get_hospitals.php/")
+  Future<List<Hospitals>> getHospitals();
 }
 
 Dio buildDioClient(String baseUrl) {

@@ -19,20 +19,20 @@ class _HospitalsApiService implements HospitalsApiService {
   String? baseUrl;
 
   @override
-  Future<Hospitals> getHospitals() async {
+  Future<List<Hospitals>> getHospitals() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<Hospitals>(Options(
+    final _result =
+        await _dio.fetch<List<dynamic>>(_setStreamType<List<Hospitals>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              'get_hospitals.php',
+              'get_hospitals.php/',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -41,7 +41,9 @@ class _HospitalsApiService implements HospitalsApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = Hospitals.fromJson(_result.data!);
+    var value = _result.data!
+        .map((dynamic i) => Hospitals.fromJson(i as Map<String, dynamic>))
+        .toList();
     return value;
   }
 
